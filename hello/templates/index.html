@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="container fluid mt-3">
+    <style>
+        .carousel {
+            position: relative;
+            max-height: 400px; /* Adjust this value based on your preference */
+            overflow: hidden;
+        }
+        .carousel-image {
+            height: 400px; /* Ensures images fit well in the carousel */
+            object-fit: contain; /* Changes from 'cover' to 'contain' to avoid cropping */
+        }
+        .carousel-caption {
+            position: absolute;
+            right: 15%; /* Adjust positioning to fit your design */
+            bottom: 20px;
+            left: 15%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark background for text visibility */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black; /* More visible control icons */
+        }
+        .card .carousel-image { /* Specific style for thumbnails to prevent using the same as carousel */
+            height: auto;
+            object-fit: scale-down; /* Ensures the entire image is visible */
+        }
+    </style>
+    
+  
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="https://cdn.pixabay.com/photo/2017/11/30/08/56/ice-cream-2987955_1280.jpg" class="d-block w-100 carousel-image" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Welcome to the webpage of best ice-creams in the town</h5>
+                  <p>Wtf!! You haven't tried the best ice-creams in your town?</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="https://img.freepik.com/free-photo/delicious-ice-cream-with-topping_23-2150735574.jpg" class="d-block w-100 carousel-image" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>We serve love with our ice-cream</h5>
+                  <p>World's best ice-creams</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="https://img.freepik.com/free-photo/delicious-ice-cream-with-topping_23-2150735490.jpg" class="d-block w-100 carousel-image" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>We know our customers like quality</h5>
+                  <p>High-Quality ice-creams for high-quality people</p>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+  <div class="container my-3">
+  <h1 class="my-4 text-center">Select from our range of ice creams</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://mcdn.wallpapersafari.com/medium/29/65/5JVk7w.jpeg" class="d-block w-100 carousel-image" alt="...">
+          {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+
+          <div class="card-body">
+            <h5 class="card-title">Raspberry Scoop Delight</h5>
+            <p class="card-text">Dive into the cool, refreshing taste of our Raspberry Scoop Delight! Packed with fresh, juicy raspberries and enveloped in a creamy, smooth texture, each spoonful offers a burst of berry bliss that's sure to refresh your palate.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://mcdn.wallpapersafari.com/medium/67/32/DZz3ba.jpg" class="d-block w-100 carousel-image" alt="Raspberry Scoop Delight">
+          {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+
+          <div class="card-body">
+            <h5 class="card-title">Tropical Trio Pops</h5>
+            <p class="card-text">Experience a splash of summer with our Tropical Trio Pops. Each pop is layered with the vibrant flavors of cherry, lime, and orange, offering a refreshing and zesty finish. Perfect for cooling down on a hot day, these pops are your go-to treat for a quick tropical getaway.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://mcdn.wallpapersafari.com/medium/33/22/SQHU3D.jpg" class="d-block w-100 carousel-image" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">Blueberry Cream Dream</h5>
+            <p class="card-text">Delight in the dreamy swirls of our Blueberry Cream Dream. Packed with succulent blueberries and folded into a silky, rich cream, this ice cream is more than just a treat; it’s a spoonful of heaven. Ideal for dessert or a luxurious snack, it promises to transport your senses.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://mcdn.wallpapersafari.com/medium/92/71/cGl1N2.jpg" class="d-block w-100 carousel-image" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">Confetti Cone Surprise</h5>
+            <p class="card-text">Embrace the fun with our Confetti Cone Surprise! This playful treat combines creamy vanilla ice cream with a colorful burst of sprinkles, all served in a crispy, sugary cone. Perfect for all ages, it’s a festive delight that brings joy and flavor in every bite.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body %}
